@@ -14,6 +14,7 @@
 		18B255362224D68D0000934E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B255352224D68C0000934E /* NSDataAdditions.m */; };
 		18B2553A22250E790000934E /* downloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2553822250E790000934E /* downloadCell.m */; };
 		18B2553B22250E790000934E /* downloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2553922250E790000934E /* downloadCell.xib */; };
+		18B2553D222519E20000934E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B2553C222519E20000934E /* 1.png */; };
 		18DEDD792223EE3800AA9C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DEDD782223EE3800AA9C34 /* AppDelegate.m */; };
 		18DEDD7C2223EE3800AA9C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DEDD7B2223EE3800AA9C34 /* ViewController.m */; };
 		18DEDD7F2223EE3800AA9C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DEDD7D2223EE3800AA9C34 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		18B2553722250E790000934E /* downloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downloadCell.h; sourceTree = "<group>"; };
 		18B2553822250E790000934E /* downloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downloadCell.m; sourceTree = "<group>"; };
 		18B2553922250E790000934E /* downloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = downloadCell.xib; sourceTree = "<group>"; };
+		18B2553C222519E20000934E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		18DEDD742223EE3800AA9C34 /* DGDownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGDownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DEDD772223EE3800AA9C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18DEDD782223EE3800AA9C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		18DEDD762223EE3800AA9C34 /* DGDownloadManager */ = {
 			isa = PBXGroup;
 			children = (
+				18B2553C222519E20000934E /* 1.png */,
 				18DEDD772223EE3800AA9C34 /* AppDelegate.h */,
 				18DEDD782223EE3800AA9C34 /* AppDelegate.m */,
 				18DEDD7A2223EE3800AA9C34 /* ViewController.h */,
@@ -200,6 +203,7 @@
 				18B2553B22250E790000934E /* downloadCell.xib in Resources */,
 				18DEDD812223EE3B00AA9C34 /* Assets.xcassets in Resources */,
 				18DEDD7F2223EE3800AA9C34 /* Main.storyboard in Resources */,
+				18B2553D222519E20000934E /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
