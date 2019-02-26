@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B2552A2224D5DB0000934E /* DGDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B255292224D5DB0000934E /* DGDownloadManager.m */; };
+		18B2552D2224D5FE0000934E /* DGDownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2552C2224D5FE0000934E /* DGDownloadItem.m */; };
+		18B255302224D6260000934E /* DGFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2552F2224D6260000934E /* DGFileManager.m */; };
+		18B255332224D6490000934E /* DGHttpConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B255322224D6490000934E /* DGHttpConfig.m */; };
+		18B255362224D68D0000934E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B255352224D68C0000934E /* NSDataAdditions.m */; };
+		18B2553A22250E790000934E /* downloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B2553822250E790000934E /* downloadCell.m */; };
+		18B2553B22250E790000934E /* downloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B2553922250E790000934E /* downloadCell.xib */; };
 		18DEDD792223EE3800AA9C34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DEDD782223EE3800AA9C34 /* AppDelegate.m */; };
 		18DEDD7C2223EE3800AA9C34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DEDD7B2223EE3800AA9C34 /* ViewController.m */; };
 		18DEDD7F2223EE3800AA9C34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DEDD7D2223EE3800AA9C34 /* Main.storyboard */; };
@@ -17,6 +24,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B255282224D5DB0000934E /* DGDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGDownloadManager.h; sourceTree = "<group>"; };
+		18B255292224D5DB0000934E /* DGDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DGDownloadManager.m; sourceTree = "<group>"; };
+		18B2552B2224D5FE0000934E /* DGDownloadItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGDownloadItem.h; sourceTree = "<group>"; };
+		18B2552C2224D5FE0000934E /* DGDownloadItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DGDownloadItem.m; sourceTree = "<group>"; };
+		18B2552E2224D6260000934E /* DGFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGFileManager.h; sourceTree = "<group>"; };
+		18B2552F2224D6260000934E /* DGFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DGFileManager.m; sourceTree = "<group>"; };
+		18B255312224D6490000934E /* DGHttpConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGHttpConfig.h; sourceTree = "<group>"; };
+		18B255322224D6490000934E /* DGHttpConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DGHttpConfig.m; sourceTree = "<group>"; };
+		18B255342224D68C0000934E /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		18B255352224D68C0000934E /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		18B2553722250E790000934E /* downloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = downloadCell.h; sourceTree = "<group>"; };
+		18B2553822250E790000934E /* downloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = downloadCell.m; sourceTree = "<group>"; };
+		18B2553922250E790000934E /* downloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = downloadCell.xib; sourceTree = "<group>"; };
 		18DEDD742223EE3800AA9C34 /* DGDownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGDownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DEDD772223EE3800AA9C34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18DEDD782223EE3800AA9C34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,9 +64,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B255272224D1260000934E /* DGDownloadManagers */ = {
+			isa = PBXGroup;
+			children = (
+				18B255282224D5DB0000934E /* DGDownloadManager.h */,
+				18B255292224D5DB0000934E /* DGDownloadManager.m */,
+				18B2552B2224D5FE0000934E /* DGDownloadItem.h */,
+				18B2552C2224D5FE0000934E /* DGDownloadItem.m */,
+				18B2552E2224D6260000934E /* DGFileManager.h */,
+				18B2552F2224D6260000934E /* DGFileManager.m */,
+				18B255312224D6490000934E /* DGHttpConfig.h */,
+				18B255322224D6490000934E /* DGHttpConfig.m */,
+				18B255342224D68C0000934E /* NSDataAdditions.h */,
+				18B255352224D68C0000934E /* NSDataAdditions.m */,
+			);
+			path = DGDownloadManagers;
+			sourceTree = "<group>";
+		};
 		18DEDD6B2223EE3800AA9C34 = {
 			isa = PBXGroup;
 			children = (
+				18B255272224D1260000934E /* DGDownloadManagers */,
 				18DEDD762223EE3800AA9C34 /* DGDownloadManager */,
 				18DEDD752223EE3800AA9C34 /* Products */,
 				7F0828B6D60A946250E7F617 /* Pods */,
@@ -70,6 +108,9 @@
 				18DEDD7A2223EE3800AA9C34 /* ViewController.h */,
 				18DEDD7B2223EE3800AA9C34 /* ViewController.m */,
 				18DEDD7D2223EE3800AA9C34 /* Main.storyboard */,
+				18B2553722250E790000934E /* downloadCell.h */,
+				18B2553822250E790000934E /* downloadCell.m */,
+				18B2553922250E790000934E /* downloadCell.xib */,
 				18DEDD802223EE3B00AA9C34 /* Assets.xcassets */,
 				18DEDD822223EE3B00AA9C34 /* LaunchScreen.storyboard */,
 				18DEDD852223EE3B00AA9C34 /* Info.plist */,
@@ -156,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DEDD842223EE3B00AA9C34 /* LaunchScreen.storyboard in Resources */,
+				18B2553B22250E790000934E /* downloadCell.xib in Resources */,
 				18DEDD812223EE3B00AA9C34 /* Assets.xcassets in Resources */,
 				18DEDD7F2223EE3800AA9C34 /* Main.storyboard in Resources */,
 			);
@@ -222,8 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B2552A2224D5DB0000934E /* DGDownloadManager.m in Sources */,
 				18DEDD7C2223EE3800AA9C34 /* ViewController.m in Sources */,
+				18B255302224D6260000934E /* DGFileManager.m in Sources */,
+				18B2552D2224D5FE0000934E /* DGDownloadItem.m in Sources */,
+				18B2553A22250E790000934E /* downloadCell.m in Sources */,
 				18DEDD872223EE3B00AA9C34 /* main.m in Sources */,
+				18B255332224D6490000934E /* DGHttpConfig.m in Sources */,
+				18B255362224D68D0000934E /* NSDataAdditions.m in Sources */,
 				18DEDD792223EE3800AA9C34 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +418,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DGDownloadManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.computer.ABC.DGDownloadManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -385,7 +436,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DGDownloadManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.computer.ABC.DGDownloadManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
