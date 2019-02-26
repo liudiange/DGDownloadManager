@@ -52,7 +52,6 @@
  暂停所有的下载
  */
 - (void)DG_SuspendAllRequest;
-
 /**
  恢复某一个下载
  
@@ -63,15 +62,12 @@
  恢复所有暂停的下载
  */
 - (void)DG_ResumeAllRequest;
-
 /**
  取消一个下载
  
  @param url 下载的全链接
  */
 - (void)DG_CancelWithUrl:(NSString *)url;
-
-
 /**
  取消所有的下载的任务
  */
