@@ -1,0 +1,6 @@
+framework module DGDownloadManager {
+  umbrella header "DGDownloadManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

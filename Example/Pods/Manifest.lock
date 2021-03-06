@@ -1,0 +1,16 @@
+PODS:
+  - DGDownloadManager (0.1.0)
+
+DEPENDENCIES:
+  - DGDownloadManager (from `../`)
+
+EXTERNAL SOURCES:
+  DGDownloadManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DGDownloadManager: 90cec7a03d27bb2c05cade477a17320cc6e38181
+
+PODFILE CHECKSUM: 29454a98927ececbb0d3b6b6aca1ca8d5d71a5c6
+
+COCOAPODS: 1.10.0

@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08DD996B9837DB0EF787024D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		08DD996B9837DB0EF787024D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DGDownloadManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGDownloadManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +62,8 @@
 		6CD3810719B6893D92C09DE4 /* Pods-DGDownloadManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDownloadManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DGDownloadManager_Tests/Pods-DGDownloadManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		956D2CD1994B8D6AAB024C1A /* DGDownloadManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DGDownloadManager.podspec; path = ../DGDownloadManager.podspec; sourceTree = "<group>"; };
-		AD85C57A9F01ED4AB58DB175 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		956D2CD1994B8D6AAB024C1A /* DGDownloadManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DGDownloadManager.podspec; path = ../DGDownloadManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD85C57A9F01ED4AB58DB175 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AF2BC0F58B563433689EF70C /* Pods-DGDownloadManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDownloadManager_Example.release.xcconfig"; path = "Target Support Files/Pods-DGDownloadManager_Example/Pods-DGDownloadManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FBB6D6908730B7E5D3949780 /* Pods-DGDownloadManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGDownloadManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-DGDownloadManager_Tests/Pods-DGDownloadManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FBDB90BC83B9DE1AB0E6CC3D /* Pods_DGDownloadManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGDownloadManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +193,6 @@
 				6CD3810719B6893D92C09DE4 /* Pods-DGDownloadManager_Tests.debug.xcconfig */,
 				FBB6D6908730B7E5D3949780 /* Pods-DGDownloadManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
