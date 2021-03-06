@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DGDownloadManager'
-  s.version          = '1.1.13'
+  s.version          = '1.1.14'
   s.summary          = 'DGDownloadManager summary'
 
 # This description is used to generate tags and improve search results.
@@ -30,16 +30,16 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'DGDownloadManager/Classes/**/*'
-  #s.subspec 'DGBackgroudDownloadManagers' do |sb|
-    #sb.source_files = 'DGDownloadManager/Classes/DGBackgroudDownloadManagers/**/*'
-    #sb.dependency "AFNetworking", "~> 3.1.0"
-  #end
+  #s.source_files = 'DGDownloadManager/Classes/**/*'
+  s.subspec 'DGBackgroudDownloadManagers' do |sb|
+    sb.source_files = 'DGDownloadManager/Classes/DGBackgroudDownloadManagers/**/*'
+    sb.dependency "AFNetworking", "~> 3.1.0"
+  end
 
-  #s.subspec 'DGDownloadManagers' do |ss|
-    #ss.source_files = 'DGDownloadManager/Classes/DGDownloadManagers/**/*'
-    #ss.dependency "AFNetworking", "~> 3.1.0"
-  #end
+  s.subspec 'DGDownloadManagers' do |ss|
+    ss.source_files = 'DGDownloadManager/Classes/DGDownloadManagers/**/*'
+    ss.dependency "AFNetworking", "~> 3.1.0"
+  end
   
   # s.resource_bundles = {
   #   'DGDownloadManager' => ['DGDownloadManager/Assets/*.png']
@@ -47,5 +47,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency "AFNetworking", "~> 3.1.0"
+  # s.dependency "AFNetworking", "~> 3.1.0"
 end
