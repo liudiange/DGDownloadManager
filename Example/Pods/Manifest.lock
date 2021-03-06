@@ -1,15 +1,41 @@
 PODS:
-  - DGDownloadManager (0.1.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DGDownloadManager (1.1.11):
+    - DGDownloadManager/DGBackgroudDownloadManagers (= 1.1.11)
+    - DGDownloadManager/DGDownloadManagers (= 1.1.11)
+  - DGDownloadManager/DGBackgroudDownloadManagers (1.1.11):
+    - AFNetworking (~> 3.1.0)
+  - DGDownloadManager/DGDownloadManagers (1.1.11):
+    - AFNetworking (~> 3.1.0)
 
 DEPENDENCIES:
   - DGDownloadManager (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
 
 EXTERNAL SOURCES:
   DGDownloadManager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DGDownloadManager: 90cec7a03d27bb2c05cade477a17320cc6e38181
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DGDownloadManager: 5e293f4fcb34e5134e6cd5dc23f42e5c63c3bbfc
 
 PODFILE CHECKSUM: 29454a98927ececbb0d3b6b6aca1ca8d5d71a5c6
 
