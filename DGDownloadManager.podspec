@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DGDownloadManager'
-  s.version          = '1.1.14'
+  s.version          = '1.1.15'
   s.summary          = 'DGDownloadManager summary'
 
 # This description is used to generate tags and improve search results.
