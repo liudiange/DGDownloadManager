@@ -25,17 +25,22 @@
 
 ## 安装 （install）
 - 全部导入方式1 （all in import method1）
-- pod 'DGDownloadManager', ‘~>1.1.14' 
+````objc
+pod 'DGDownloadManager', ‘~>1.1.14' 
+````
 
 - 全部导入方式2 （all in import method2）
-- pod 'DGDownloadManager',:subspecs => ['DGBackgroudDownloadManagers','DGDownloadManagers']
+````objc
+pod 'DGDownloadManager',:subspecs => ['DGBackgroudDownloadManagers','DGDownloadManagers']
+````
 
 - 只是导入后台下载的框架 （import DGBackgroudDownloadManagers only）
-- pod 'DGDownloadManager/DGBackgroudDownloadManagers', ‘~>1.1.14' 
-
+````objc
+pod 'DGDownloadManager/DGBackgroudDownloadManagers', ‘~>1.1.14' 
+````
 - 只是导入前台下载的框架 （import DGDownloadManagers only）
-- pod 'DGDownloadManager/DGDownloadManagers', ‘~>1.1.14' 
-
+pod 'DGDownloadManager/DGDownloadManagers', ‘~>1.1.14' 
+````
 
 ## 使用 （use）
 - 开始下载(单一) （Start downloading (single))
