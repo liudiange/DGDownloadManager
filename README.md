@@ -208,7 +208,17 @@ pod 'DGDownloadManager/DGDownloadManagers', '~>1.1.14'
   // 需要自己获取当前下载的item(Need to get the current download Status)
    model.downloadStatus
 ````
+- 开启自动网络恢复（open network restore）
 
+````objc
+  // 需要在下载任务之前进行设置
+  [DGDownloadManager shareManager].DG_AutoDownload = YES;
+   
+````
+````objc
+// 需要在下载任务之前进行设置
+  [DGBackgroudDownloadManager shareManager].DG_AutoDownload = YES;
+````
 
 ## 期待(hope)
 - 有什么bug或者我不满足的需求，欢迎 Issues我(There are any bugs or not satisfied, welcome to issues me)
