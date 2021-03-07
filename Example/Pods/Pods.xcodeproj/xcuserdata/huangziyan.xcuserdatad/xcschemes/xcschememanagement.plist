@@ -14,12 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-DGDownloadManager_Example.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-DGDownloadManager_Tests.xcscheme</key>
+		<key>Pods-DGDownloadManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

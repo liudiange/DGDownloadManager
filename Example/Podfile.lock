@@ -14,26 +14,27 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - DGDownloadManager (1.1.14):
-    - DGDownloadManager/DGBackgroudDownloadManagers (= 1.1.14)
-    - DGDownloadManager/DGDownloadManagers (= 1.1.14)
   - DGDownloadManager/DGBackgroudDownloadManagers (1.1.14):
     - AFNetworking (~> 3.1.0)
   - DGDownloadManager/DGDownloadManagers (1.1.14):
     - AFNetworking (~> 3.1.0)
 
 DEPENDENCIES:
-  - DGDownloadManager (~> 1.1.14)
+  - DGDownloadManager/DGBackgroudDownloadManagers (from `../`)
+  - DGDownloadManager/DGDownloadManagers (from `../`)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - DGDownloadManager
+
+EXTERNAL SOURCES:
+  DGDownloadManager:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DGDownloadManager: 5ba202d07d0823da4366a8bf9f48bc8cc4b88218
 
-PODFILE CHECKSUM: cd805eae6cf2391254b40cd4224445c392a58468
+PODFILE CHECKSUM: 6f8f34a7acc90ecae6c8d4ffaccd60433f1218a0
 
 COCOAPODS: 1.10.0

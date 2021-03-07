@@ -2,16 +2,15 @@
 //  main.m
 //  DGDownloadManager
 //
-//  Created by shaoyeliudiange@163.com on 03/06/2021.
-//  Copyright (c) 2021 shaoyeliudiange@163.com. All rights reserved.
+//  Created by apple on 2019/2/25.
+//  Copyright © 2019年 apple. All rights reserved.
 //
 
-@import UIKit;
-#import "DGAppDelegate.h"
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([DGAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

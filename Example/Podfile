@@ -1,14 +1,10 @@
-use_frameworks!
 
+use_frameworks!
 platform :ios, '9.0'
 
-target 'DGDownloadManager_Example' do
+target 'DGDownloadManager' do
   
-  pod 'DGDownloadManager', ‘~>1.1.14'
-  
-  target 'DGDownloadManager_Tests' do
-    inherit! :search_paths
+	#pod 'DGDownloadManager/DGBackgroudDownloadManagers', :path => '../'
+  pod 'DGDownloadManager',:subspecs => ['DGBackgroudDownloadManagers','DGDownloadManagers'], :path => '../'
 
-    
-  end
 end
