@@ -229,6 +229,15 @@ pod 'DGDownloadManager/DGDownloadManagers', '~>1.1.14'
     
 }
 ````
+- 获取下载成功的数据源（get success data）
+````objc
+// 获取下载成功的数据item
+[[DGDownloadManager shareManager] DG_GetAllDownloadItems];
+````
+````objc
+// 获取下载成功的数据model
+[[DGBackgroudDownloadManager shareManager] DG_GetAllDownloadModels];
+````
 
 ## 期待(hope)
 - 有什么bug或者我不满足的需求，欢迎 Issues我(There are any bugs or not satisfied, welcome to issues me)
