@@ -219,6 +219,16 @@ pod 'DGDownloadManager/DGDownloadManagers', '~>1.1.14'
 // 需要在下载任务之前进行设置
   [DGBackgroudDownloadManager shareManager].DG_AutoDownload = YES;
 ````
+- 后台下载需要注意点（pay attentiton for DGBackgroudDownloadManager）
+````objc
+// 需要在appdelegate 方法里面写上
+-(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler{
+    
+    [[DGBackgroudDownloadManager shareManager] handleBackgroudcompletionHandler: completionHandler
+                                                                     identifier: identifier];
+    
+}
+````
 
 ## 期待(hope)
 - 有什么bug或者我不满足的需求，欢迎 Issues我(There are any bugs or not satisfied, welcome to issues me)
