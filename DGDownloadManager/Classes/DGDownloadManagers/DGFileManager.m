@@ -7,6 +7,10 @@
 //
 
 #import "DGFileManager.h"
+#import "NSDataAdditions.h"
+
+
+#define cacheItemDataPath [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"DGDownload"] stringByAppendingPathComponent:@"cacheDownloadItems.plist"]
 
 @implementation DGFileManager
 /**
@@ -53,4 +57,54 @@
     
     return [[NSSearchPathForDirectoriesInDomains(NSMusicDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:@"/DG_LocalMusic"];
 }
+
+/// 存储下载完成的数据item
+/// @param item item
++ (void)saveDownloaditem:(DGDownloadItem *)item{
+    if (item.requestUrl.length == 0) {
+        return;
+    }
+    NSMutableDictionary *resumeMap = [NSMutableDictionary new];
+    NSString *key = [[item.requestUrl dataUsingEncoding:NSUTF8StringEncoding] DG_MD5HashString];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheItemDataPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:cacheItemDataPath contents:nil attributes:nil];
+    }else{
+       resumeMap = (NSMutableDictionary *)[NSKeyedUnarchiver unarchiveObjectWithFile:cacheItemDataPath];
+    }
+    
+    DGDownloadSaveItem *saveItem = [[DGDownloadSaveItem alloc] init];
+    saveItem.requestUrl = item.requestUrl;
+    saveItem.customCacheName = item.customCacheName;
+    saveItem.cachePath = item.cachePath;
+    saveItem.progress = item.progress;
+    saveItem.downloadStatus = item.downloadStatus;
+    saveItem.temPath = item.temPath;
+    saveItem.paramDic = item.paramDic;
+    saveItem.requestMethod = item.requestMethod;
+    resumeMap[key] = saveItem;
+    [NSKeyedArchiver archiveRootObject:resumeMap toFile:cacheItemDataPath];
+}
+
+
+/// 获取所有已经下载过的model
++ (NSMutableArray<DGDownloadSaveItem *> *)getAllDownloadItems{
+    
+    NSMutableDictionary *resumeMap = [NSMutableDictionary new];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheItemDataPath]) {
+        return nil;
+    }else{
+       resumeMap = (NSMutableDictionary *)[NSKeyedUnarchiver unarchiveObjectWithFile:cacheItemDataPath];
+    }
+    if (resumeMap.allKeys.count == 0) {
+        return nil;
+    }
+    NSMutableArray *temArray = [NSMutableArray array];
+    for (DGDownloadSaveItem *item in resumeMap.allValues) {
+        [temArray addObject:item];
+    }
+    return temArray;
+    
+}
+
 @end

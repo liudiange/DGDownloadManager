@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DGDownloadItem.h"
+#import "DGDownloadSaveItem.h"
 
 #define  MAXTASK_COUNT  3
 @interface DGDownloadManager : NSObject
@@ -76,6 +77,12 @@
  取消所有的下载的任务
  */
 - (void)DG_CancelAllRequest;
+
+#pragma mark--获取数据相关
+/**
+ 获取所有下载完成的数据model的数据源
+ */
+- (NSMutableArray<DGDownloadSaveItem *> *)DG_GetAllDownloadItems;
 
 @end
 

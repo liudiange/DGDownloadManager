@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DGDownloadSaveItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,6 +32,15 @@ NS_ASSUME_NONNULL_BEGIN
  *   获取缓存的文件夹路径
  */
 + (NSString *)DG_GetCachePath;
+
+/// 存储下载完成的数据item
+/// @param item item
++ (void)saveDownloaditem:(DGDownloadItem *)item;
+
+
+/// 获取所有已经下载过的model
++ (NSMutableArray<DGDownloadSaveItem *> *)getAllDownloadItems;
+
 
 @end
 

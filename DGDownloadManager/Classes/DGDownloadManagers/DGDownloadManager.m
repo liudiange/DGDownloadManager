@@ -8,6 +8,7 @@
 
 #import "DGDownloadManager.h"
 #import "NSDataAdditions.h"
+#import "DGFileManager.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface DGDownloadManager ()
@@ -228,6 +229,13 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:DGCancelAllSong object:nil];
 }
+#pragma mark--获取数据相关
+/**
+ 获取所有下载完成的数据model的数据源
+ */
+- (NSMutableArray<DGDownloadSaveItem *> *)DG_GetAllDownloadItems{
+    return [DGFileManager getAllDownloadItems];
+}
 #pragma mark - 自身需要实现的方法
 /**
  便利数组获取item
@@ -398,6 +406,8 @@
             // 存放到自己想存放的路径
             NSError *transError = nil;
             [[NSFileManager defaultManager] moveItemAtPath:item.temPath toPath:item.cachePath error:&transError];
+            
+            [DGFileManager saveDownloaditem:item];
             // 从数组中移除成功的
             [weakSelf.DG_DownloadArray removeObject:item];
             // 删除临时的文件

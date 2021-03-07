@@ -19,6 +19,7 @@
 #import "NSURLSession+CorrectedResumeData.h"
 #import "DGDownloadItem.h"
 #import "DGDownloadManager.h"
+#import "DGDownloadSaveItem.h"
 #import "DGFileManager.h"
 #import "DGHttpConfig.h"
 #import "NSDataAdditions.h"

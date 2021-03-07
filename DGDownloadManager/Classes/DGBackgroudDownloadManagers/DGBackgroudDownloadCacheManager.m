@@ -121,7 +121,7 @@
     for (DGBackgroudDownloadSaveModel *model in resumeMap.allValues) {
         [temArray addObject:model];
     }
-    return temArray;;
+    return temArray;
 }
 
 @end
