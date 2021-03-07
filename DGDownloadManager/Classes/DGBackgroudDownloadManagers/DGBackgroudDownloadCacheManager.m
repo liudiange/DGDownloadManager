@@ -9,8 +9,10 @@
 #import "DGBackgroudDownloadCacheManager.h"
 #import "NSData+Category.h"
 #import <objc/message.h>
+#import "DGBackgroudDownloadSaveModel.h"
 
 #define cacheDataPath [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"DGBackgroudDownload"] stringByAppendingPathComponent:@"cacheResumeData.plist"]
+#define cacheModelDataPath [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"DGBackgroudDownload"] stringByAppendingPathComponent:@"cacheDownloadModel.plist"]
 
 @implementation DGBackgroudDownloadCacheManager
 
@@ -74,6 +76,52 @@
         [resumeMap removeObjectForKey:key];
         [NSKeyedArchiver archiveRootObject:resumeMap toFile:cacheDataPath];
     }
+}
+
+/// 存储下载完成的数据model
+/// @param model model
++ (void)saveDownloadModel:(DGBackgroudDownloadModel *)model{
+    
+    if (model.requestUrl.length == 0) {
+        return;
+    }
+    NSMutableDictionary *resumeMap = [NSMutableDictionary new];
+    NSString *key = [[model.requestUrl dataUsingEncoding:NSUTF8StringEncoding] DG_MD5HashString];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheModelDataPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:cacheModelDataPath contents:nil attributes:nil];
+    }else{
+       resumeMap = (NSMutableDictionary *)[NSKeyedUnarchiver unarchiveObjectWithFile:cacheModelDataPath];
+    }
+    
+    DGBackgroudDownloadSaveModel *saveModel = [[DGBackgroudDownloadSaveModel alloc] init];
+    saveModel.requestUrl = model.requestUrl;
+    saveModel.customCacheName = model.customCacheName;
+    saveModel.cachePath = model.cachePath;
+    saveModel.progress = model.progress;
+    saveModel.downloadStatus = model.downloadStatus;
+    resumeMap[key] = saveModel;
+    [NSKeyedArchiver archiveRootObject:resumeMap toFile:cacheModelDataPath];
+    
+}
+
+/// 获取所有已经下载过的model
++ (NSMutableArray<DGBackgroudDownloadSaveModel *> *)getAllDownloadModels{
+    
+    NSMutableDictionary *resumeMap = [NSMutableDictionary new];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheModelDataPath]) {
+        return nil;
+    }else{
+       resumeMap = (NSMutableDictionary *)[NSKeyedUnarchiver unarchiveObjectWithFile:cacheModelDataPath];
+    }
+    if (resumeMap.allKeys.count == 0) {
+        return nil;
+    }
+    NSMutableArray *temArray = [NSMutableArray array];
+    for (DGBackgroudDownloadSaveModel *model in resumeMap.allValues) {
+        [temArray addObject:model];
+    }
+    return temArray;;
 }
 
 @end

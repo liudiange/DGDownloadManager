@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DGBackgroudDownloadModel.h"
+#import "DGBackgroudDownloadSaveModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -26,6 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 删除一个resumedata
 /// @param downloadUrl 下载的url
 + (void)deleteResumeDataWithUrl:(NSString *)downloadUrl;
+
+/// 存储下载完成的数据model
+/// @param model model
++ (void)saveDownloadModel:(DGBackgroudDownloadModel *)model;
+
+
+/// 获取所有已经下载过的model
++ (NSMutableArray<DGBackgroudDownloadSaveModel *> *)getAllDownloadModels;
 
 @end
 

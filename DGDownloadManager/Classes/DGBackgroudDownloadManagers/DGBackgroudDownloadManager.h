@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DGBackgroudDownloadModel.h"
+#import "DGBackgroudDownloadSaveModel.h"
 
 
 @interface DGBackgroudDownloadManager : NSObject
@@ -25,6 +26,7 @@
 /** 存放数据源数组*/
 @property (nonatomic, strong, readonly) NSMutableArray *DG_BackgroudDownloadArray;
 
+#pragma mark--下载的方法
 /* 处理后台通知的相关事件需要在这个方法中写入
  - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
  @param completionHandler completionHandler
@@ -78,6 +80,12 @@
  取消所有的下载的任务
  */
 - (void)DG_CancelAllRequest;
+#pragma mark--获取数据相关
+/**
+ 获取所有下载完成的数据model的数据源
+ */
+- (NSMutableArray<DGBackgroudDownloadSaveModel *> *)DG_GetAllDownloadModels;
+
 
 @end
 

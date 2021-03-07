@@ -14,6 +14,7 @@
 #import "DGBackgroudDownloadDelegate.h"
 #import "DGBackgroudDownloadManager.h"
 #import "DGBackgroudDownloadModel.h"
+#import "DGBackgroudDownloadSaveModel.h"
 #import "NSData+Category.h"
 #import "NSURLSession+CorrectedResumeData.h"
 #import "DGDownloadItem.h"

@@ -60,11 +60,10 @@ static NSString * const CELL_ID = @"cell_id";
 //    @"https://qd.myapp.com/myapp/qqteam/pcqq/QQ9.0.8_2.exe",
 //    @"http://gxiami.alicdn.com/xiami-desktop/update/XiamiMac-03051058.dmg"
     NSArray *list = @[
-        @"https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.24.19041401_Installer.pkg",
+//        @"https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.24.19041401_Installer.pkg",
         @"http://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg",
         @"http://m4.pc6.com/cjh3/VicomsoftFTPClient.dmg"
     ];
-    //@"https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_16.24.19041401_Installer.pkg"
     // 指定最大任务数量
     [DGBackgroudDownloadManager shareManager].DG_MaxTaskCount = 3;
     for (NSInteger index = 0; index < list.count; index ++) {
@@ -149,6 +148,12 @@ static NSString * const CELL_ID = @"cell_id";
     
     [[DGBackgroudDownloadManager shareManager] DG_ResumeWithUrl:TEST_URL];
 }
+- (IBAction)getAllDownloadModels:(UIButton *)sender {
+   NSArray *array = [[DGBackgroudDownloadManager shareManager] DG_GetAllDownloadModels];
+    NSLog(@"所有的array --- %@",array);
+}
+
+
 #pragma mark - datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

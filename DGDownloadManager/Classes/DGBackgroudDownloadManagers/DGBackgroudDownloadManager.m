@@ -406,6 +406,9 @@ typedef void(^CompletionHandlerType)(void);
         [weakModel.session invalidateAndCancel];
         [weakModel.task cancel];
         weakModel.task = nil;
+        
+        // 存储model
+        [DGBackgroudDownloadCacheManager saveDownloadModel:weakModel];
 
         [weakSelf.lock lock];
         [weakSelf.DG_DownloadArray removeObject:weakModel];
@@ -445,6 +448,15 @@ typedef void(^CompletionHandlerType)(void);
         }
     };
 }
+#pragma mark--获取数据相关
+/**
+ 获取所有下载完成的数据model的数据源
+ */
+- (NSMutableArray<DGBackgroudDownloadSaveModel *> *)DG_GetAllDownloadModels{
+    
+    return [DGBackgroudDownloadCacheManager getAllDownloadModels];
+}
+
 #pragma mark -- 内部监听方法调用
 
 /// 监听网络变化自动恢复下载
