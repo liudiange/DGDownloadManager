@@ -1,11 +1,11 @@
 .DS_Store
 
-DGDownloadManager/Pods/Pods.xcodeproj/*
-!DGDownloadManager/Pods/Pods.xcodeproj/project.pbxproj
+Example/Pods/*
+!Example/Pods/Pods.xcodeproj/project.pbxproj
 
 
-DGDownloadManager/DGDownloadManager.xcodeproj/*
-!DGDownloadManager/DGDownloadManager.xcodeproj/project.pbxproj
+Example/DGDownloadManager.xcodeproj/*
+!Example/DGDownloadManager.xcodeproj/project.pbxproj
 
-DGDownloadManager/DGDownloadManager.xcworkspace/*
-!DGDownloadManager/DGDownloadManager.xcworkspace/contents.xcworkspacedata
+Example/DGDownloadManager.xcworkspace/*
+!Example/DGDownloadManager.xcworkspace/contents.xcworkspacedata

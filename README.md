@@ -1,5 +1,5 @@
 #DGDownloadManager
-![image](https://github.com/liudiange/DGDownloadManager/blob/master/DGDownloadManager/DGDownloadManager/1.png)
+![image](https://github.com/liudiange/DGDownloadManager/blob/master/1.png)
 
 下载管理器，只要传递下载的url来进行下载，支持ios 和macos      （Download Manager, as long as the URL passed to download download, support ios and macos）
  
@@ -14,7 +14,7 @@
 - 可以恢复下载一链接 （Resume downloading a link）
 - 可以恢复全部下载 （Resume all downloads）
 ## 思路（idea）
-![image](https://github.com/liudiange/DGDownloadManager/blob/master/DGDownloadManager/DGDownloadManager/2.png)
+![image](https://github.com/liudiange/DGDownloadManager/blob/master/2.png)
 
 ##### 解释（explain）：
 - 其中DGDownloadManager负责全局的管理，创建一个下载队列管理的数组，需要下载的添加进数组，下载完成的从数组中移除，并且发送通知下载已经完成。（DGDownload Manager is responsible for global management, creating an array of download queue management, adding downloads to the array, removing downloads from the array, and sending notifications that downloads have been completed）
@@ -24,9 +24,19 @@
 - DGBackgroudDownloadModel 这个是后台下载的model，你可以继承它。他里面包含下载的状态，下载进度，下载速度等等（DGBackgroudDownloadModel This is a model downloaded in the background, you can inherit it. It contains download status, download progress, download speed, etc.）
 
 ## 安装 （install）
-- 需要将 DGDownloadManagers拖入工程中  （need to drag DGDownloadManagers into the project）
-- pod 'DGDownloadManager', ‘~>0.0.1'
-- 注意mac Os 暂时不支持cocoapod  （Note that macos does not currently support cocoapod）
+- 全部导入方式1 （all in import method1）
+- pod 'DGDownloadManager', ‘~>1.1.14' 
+
+- 全部导入方式2 （all in import method2）
+- pod 'DGDownloadManager',:subspecs => ['DGBackgroudDownloadManagers','DGDownloadManagers']
+
+- 只是导入后台下载的框架 （import DGBackgroudDownloadManagers only）
+- pod 'DGDownloadManager/DGBackgroudDownloadManagers', ‘~>1.1.14' 
+
+- 只是导入前台下载的框架 （import DGDownloadManagers only）
+- pod 'DGDownloadManager/DGDownloadManagers', ‘~>1.1.14' 
+
+
 ## 使用 （use）
 - 开始下载(单一) （Start downloading (single))
 ````objc
